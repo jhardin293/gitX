@@ -250,7 +250,6 @@ class App extends Component {
     });
   };
   onSuggestionsFetchRequested = ({ value }) => {
-    // this.loadSuggestions(value);
     this.autocompleteSearchDebounced(value);
   };
 
@@ -277,7 +276,6 @@ class App extends Component {
             avatar_url: org.avatar_url
           }
         })
-        console.log(org, 'org')
       })
       .catch(error => console.error(error))
   }
@@ -346,27 +344,17 @@ class App extends Component {
         })
       }).then(res => res.json()))
     })
-    console.log(promiseArray, 'repo req list');
+
     Promise.all(promiseArray).then((rsp) => {
-      console.log(repoList, rsp, 'repo in promise');
       rsp.forEach((repo, idx) => {
         if (repo.data.repository.ref !== null) {
           repoList[idx].commits = repo.data.repository.ref.target.history.totalCount;
         }
-        console.log(rsp.length,'length', idx)
         if (rsp.length === idx + 1) {
-          console.log(repoList, 'repolist')
           this.updateRepos(repoList);
         }
-        console.log(repo.data.repository.ref, 'refffffs')
       })
     })
-
-    //Loop the repos
-    //Get commits from api
-    //Add to repos
-    //setState
-
   }
 
   updateRepos = (list) => {
@@ -411,7 +399,6 @@ class App extends Component {
       value,
       onChange: this.onChange
     };
-    console.log(this.state.repoData, 'repoData');
     return (
       <div className="App" >
         <header className="App-header">
