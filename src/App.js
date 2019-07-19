@@ -314,11 +314,12 @@ class App extends Component {
 
   getCommitData = (repoList) => {
     const promiseArray = []
+    const API_KEY = process.env.REACT_APP_GITHUB_API_KEY
     repoList.forEach((repo, idx) => {
       promiseArray.push(fetch('https://api.github.com/graphql', {
         method: 'POST',
         headers: {
-          Authorization: 'bearer 14060c44661b2b3ba07919b0a884536a7909486c'
+          Authorization: `bearer ${API_KEY}`
         },
         body: JSON.stringify({
           query: `
