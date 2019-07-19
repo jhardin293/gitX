@@ -1,8 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setting up Github access 
+1. Unzip and open env.zip
+2. Drag .env file to project root
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+Install node modules
+
 
 ### `npm start`
 
