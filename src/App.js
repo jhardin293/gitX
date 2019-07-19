@@ -385,7 +385,8 @@ class App extends Component {
 
   handleScroll = () => {
     const pageY = window.scrollY;
-    if (pageY >= 107) {
+    const thresh = (document.body.offsetWidth > 567)  ? 107 : 115;
+    if (pageY >= thresh) {
       this.setState({ stickHeader: true })
     } else {
       this.setState({ stickHeader: false })

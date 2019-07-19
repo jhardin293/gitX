@@ -342,6 +342,10 @@ html {
   }
   .sticky-header .rdt_TableHead {
     width: 100%;
+    top: 154px;
+  }
+  .sticky-header .rdt_TableBody {
+    margin-top: 60px;
   }
   .repo-table-container {
     width: 100%;
