@@ -1,0 +1,354 @@
+html {
+  box-sizing: border-box; 
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; 
+}
+.App-header {
+  background-color: #282c34;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+}
+
+.App-header .container {
+  width: 94%;
+  margin: auto 0px;
+  display: flex;
+}
+
+.logo {
+  width: 74px;
+  height: 48px;
+  margin-right: 50px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 4px;
+  width: 50%;
+  height: 48px;
+  
+}
+.input-group span {
+  margin-right: 8px;
+  margin-left: 6px;
+}
+
+.input-group .react-autosuggest__container {
+  width: 100%;
+}
+
+.input-group input:focus {
+  outline: none;
+}
+.react-autosuggest__container .react-autosuggest__suggestions-container--open {
+  /* margin-top: 100px; */
+  background-color: #ffffff;
+  color: black;
+  top: 38px;
+  left: -46px;
+  width: calc(100% + 46px);
+}
+
+.background-ribbon {
+  height: 400px;
+  /* background-color: #6b6363; */
+  background-image: linear-gradient(0deg, #FFFFFF 6%, #DD2734 91%, #DB1A28 96%);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+.repo-table-container {
+  margin: auto;
+  margin-top: 15px;
+  width: 94%;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  background-color: white;
+}
+.rdt_TableHead {
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+.sticky-header .rdt_TableHead {
+  position: fixed;
+  top: 64px;
+  background-color: white;
+  z-index: 1;
+  width: 94%;
+  box-shadow: 0 4px 13px -2px grey;
+}
+.hide-sticky-header.sticky-header .rdt_TableHead {
+  opacity: 0;
+}
+.sticky-header .rdt_TableBody {
+  margin-top: 50px;
+}
+
+.repo-table .rdt_TableHead, .repo-table .rdt_TableBody, {
+  /* width: 50% ; */
+}
+.repo-table .rdt_TableRow,.repo-table .rdt_TableHeadRow {
+  background-color: white;
+}
+.rdt_TableRow:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+
+.repo-table .highlight button {
+  background: white;
+  outline: none;
+  border: 1px solid  #4f95cb;
+  border-radius: 4px;
+  color: #4f95cb;
+  cursor: pointer;
+  width: 60px;
+  height: 27px;
+  transition: all ease 0.3s;
+}
+.repo-table .highlight button:hover {
+  background-color: #4f95cb;
+  color: white;
+}
+.repo-table header {
+  display: none;
+}
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  width: 240px;
+  height: 30px;
+  font-weight: 300;
+  font-size: 17px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 51px;
+  width: 100%;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #ddd;
+}
+
+
+
+.org-header-container {
+  margin-top: 100px;
+}
+
+.org-header_inner {
+  margin-left: 17px;
+}
+
+.org-header_inner p {
+  margin: 0px;
+}
+
+.org-header_inner-top {
+  display: flex;
+  align-items: baseline;
+}
+
+.org-header_inner-top h1{
+  margin: 0px;
+  margin-right: 20px;
+}
+.org-header_inner-top h4 {
+  margin: 0px;
+}
+
+
+
+.org-header {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  width: 94%;
+}
+.org-header img {
+  width: 51px;
+  height: 51px;
+  background: white;
+  border-radius: 100%;
+}
+
+
+.ReactModal__Overlay {
+  z-index: 2;
+}
+.ReactModal__Overlay .slide-pane__header {
+}
+
+
+.commits-listing {
+  position: relative;
+}
+.commits-listing .commit-meta {
+  display: flex;
+  margin-right: 20px;
+}
+.commits-listing .commit-meta img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.commits-listing:before {
+  background-color: #515253;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 6px;
+  position: absolute;
+  top: 7px;
+  width: 2px;
+  z-index: -1;
+}
+.commit-group-title {
+  display: flex;
+  align-items: center;
+}
+.commit-group-title img {
+  background: #fff;
+  margin-right: 20px;
+}
+
+.commit-group {
+  margin-left: 14px;
+  list-style: none;
+}
+
+.ReactModal__Content {
+  min-width: 557px !important;
+}
+
+.expandedSection {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.ex-description {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  max-width: 514px;
+}
+.expandedSection p  {
+  margin: 0px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.expandedSection p span {
+  color: rgba(0,0,0,.54);
+}
+
+@media only screen and (min-width: 1002px) {
+  .ex-forks {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .ex-stars {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .ex-issues, .ex-created, .ex-updated {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .App-header {
+    height: 154px;
+  }
+  .App-header .container {
+    display: block;
+    text-align:  center;
+  }
+
+  .App-header .container img {
+    margin-right: 0px;
+  }
+
+  .App-header .input-group {
+    width: 100%;
+  }
+
+  .react-autosuggest__container .react-autosuggest__suggestions-container--open {
+    text-align: left;
+  }
+  .org-header-container {
+    margin-top: 180px;
+  }
+  .ReactModal__Content {
+    width: 100% !important;
+    min-width: auto !important;
+  }
+  .sticky-header .rdt_TableHead {
+    width: 100%;
+  }
+  .repo-table-container {
+    width: 100%;
+  }
+  .org-header_inner-top {
+    display:  block;
+  }
+
+  
+}
